@@ -1,4 +1,4 @@
-Try it out [here](https://vehicle-sync.com).
+This app is not maintained. I built it for a University Project and I no longer have any interest in it.
 
 # Vehicle Maintenance Tracker
 
