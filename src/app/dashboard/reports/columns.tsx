@@ -51,7 +51,6 @@ export const columns: ColumnDef<MaintenanceRecordWithType>[] = [
     header: "Date",
     cell: ({ row }) => {
       const record = row.original;
-      console.log(record.date);
       const date = new Date(record.date);
       return <div>{format(date, "PPP")}</div>;
     },

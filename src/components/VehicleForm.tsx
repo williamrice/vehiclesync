@@ -25,11 +25,11 @@ import { CalendarIcon } from "lucide-react";
 import { Calendar } from "./ui/calendar";
 
 const formSchema = z.object({
-  year: z.coerce.number(),
+  year: z.number(),
   make: z.string().min(2, "Make must be at least 2 characters"),
   model: z.string().min(2, "Model must be at least 2 characters"),
   vin: z.string().length(17, "A valid VIN has 17 characters"),
-  mileage: z.coerce.number(),
+  mileage: z.number(),
   purchaseDate: z.date(),
   color: z.string().min(2, "Color must be at least 2 characters"),
   active: z.boolean(),

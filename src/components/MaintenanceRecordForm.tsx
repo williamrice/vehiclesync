@@ -37,11 +37,11 @@ import { toast } from "sonner";
 const formSchema = z.object({
   vehicleId: z.string().min(1, "Please select a vehicle"),
   maintenanceTypeId: z.string().min(1, "Please select a maintenance type"),
-  date: z.date({ required_error: "Please select a date" }),
-  mileage: z.coerce.number().min(0, "Mileage must be a positive number"),
+  date: z.date({ message: "Please select a date" }),
+  mileage: z.number().min(0, "Mileage must be a positive number"),
   description: z.string().min(2, "Description must be at least 2 characters"),
   location: z.string().min(2, "Location must be at least 2 characters"),
-  amount: z.coerce.number().min(0, "Amount must be a positive number"),
+  amount: z.number().min(0, "Amount must be a positive number"),
 });
 
 interface MaintenanceType {

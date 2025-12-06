@@ -23,7 +23,6 @@ export async function comparePassword(
   if (!password || !hash) {
     throw new Error("Password and hash are required");
   }
-
   // Compare the password with the hash
   const isMatch = await bcrypt.compare(password + PEPPER, hash);
 

@@ -54,10 +54,20 @@ export function ExpenseByCategoryChart(props: ExpenseByCategoryChartProps) {
               className="mx-auto aspect-square max-h-[300px]"
             >
               <PieChart>
-                <Pie data={props.chartData} dataKey="amount" />
+                <Pie
+                  data={props.chartData}
+                  dataKey="amount"
+                  nameKey="maintType"
+                />
                 <ChartLegend
-                  content={<ChartLegendContent nameKey="maintType" />}
-                  className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+                  content={(legendProps) => (
+                    <ChartLegendContent
+                      payload={legendProps.payload}
+                      verticalAlign={legendProps.verticalAlign}
+                      nameKey="maintType"
+                    />
+                  )}
+                  className="-translate-y-2 flex-wrap gap-2 *:basis-1/4 *:justify-center"
                 />
               </PieChart>
             </ChartContainer>
